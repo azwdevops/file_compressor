@@ -1,0 +1,136 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+/*===== VARIABLES CSS =====*/
+
+:root {
+  --header-height: 4rem;
+  --nav-width: 68px;
+  /*===== Font and typography =====*/
+  --body-font: "Nunito", sans-serif;
+  --normal-font-size: 1rem;
+  --theme-color-1: dodgerblue;
+  --theme-color-2: #5b18a8;
+  --first-color: #4723d9;
+  /*===== z index =====*/
+  --z-fixed: 100;
+}
+
+
+body {
+    position: relative;
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    transition: 0.5s;
+  }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+}
+button {
+  color: white;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border:none;
+  cursor:pointer;
+}
+button:hover {
+  opacity: 0.6;
+}
+.add__button {
+  background: linear-gradient(
+    to right,
+    var(--theme-color-1),
+    var(--theme-color-2)
+  );
+  color: #ffffff;
+  margin-top: 5px;
+  padding: 5px 15px;
+  max-width: fit-content;
+}
+
+a {
+  color:dodgerblue !important;
+}
+
+
+// colors
+.red {
+  color: red !important;
+}
+.green {
+  color:green;
+}
+
+.dialog {
+  padding:10px;
+  h3 {
+    color: dodgerblue;
+    text-align: center;
+    text-decoration: underline;
+  }
+  .dialog__rowSingleItem {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .dialog__rowSingleItem,
+  .dialog__row {
+    label {
+      color: purple;
+      margin: 2px 5px;
+      font-weight: bold;
+    }
+    input,
+    select {
+      padding: 7px 10px;
+      border-radius: 10px;
+      border: 1px solid dodgerblue;
+    }
+  }
+  .form__Buttons {
+    position: sticky;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    button {
+      padding: 7px 15px;
+      margin: 0px 20px;
+      max-width: fit-content;
+      color: white;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+    .close__button {
+      background: linear-gradient(to bottom, #cd03ff, #f00030);
+    }
+    // the continue button could be either, submit, update, login, signup, continue, print etc, button that calls next action a
+    .continue__button {
+      background: linear-gradient(to right, var(--first-color), dodgerblue);
+    }
+  }
+}
+
+#pageLoading,
+#formLoading {
+  opacity: 0.3;
+  pointer-events: none;
+  cursor: not-allowed !important;
+}
+
+/* ===== MEDIA QUERIES=====*/
+@media screen and (min-width: 768px) {
+   /*Add padding body desktop*/
+   .body-pd {
+    margin-left: calc(var(--nav-width) + 135px) !important;
+    transition: 0.5s;
+  }
+}
+

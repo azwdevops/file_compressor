@@ -1,0 +1,12 @@
+.home {
+    margin-top:calc(var(--header-height) + 3rem);
+    text-align: center;
+    h3 {
+        color:dodgerblue;
+        text-decoration: underline;
+    }
+    * {
+        margin-bottom:1rem;
+    }
+
+}
